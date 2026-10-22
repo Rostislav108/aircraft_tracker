@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "aircraft-tracker"
+version = "0.1.0"
+description = "Трекер самолётов: интеграция с API nominatim и opensky"
+authors = ["Rostislav Lotrenko"]
+package-mode = false
+
+[tool.isort]
+profile = "black"
+line_length = 120
+known_first_party = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 70
+show_missing = true
